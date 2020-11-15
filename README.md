@@ -1,1 +1,0 @@
-# dailytrial3rd
