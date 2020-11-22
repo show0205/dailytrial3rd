@@ -72,12 +72,8 @@
 						<!-- entry-item-body -->
 						<div class="entry-item-body">
 							<div class="entry-item-meta">
-								<?php
-								$category = get_the_category();
-								if($category[0]) {
-									echo '<div class="entry-item-tag">' . $category[0]->cat_name . '</div>';
-								}
-								 ?>
+								<!-- trueを引数として渡すとリンク付き、falseを渡すとリンクなし -->
+								<div class="entry-item-tag"><?php my_the_post_category( false ); ?></div><!-- /entry-item-tag -->
 								<!-- <div class="entry-item-tag">カテゴリ名</div>/entry-item-tag -->
 								<time class="entry-item-published" datetime="<?php the_time('c') ?>"><?php the_time('Y/m/d') ?></time><!-- /entry-item-published -->
 							</div><!-- /entry-item-meta -->
@@ -95,26 +91,7 @@
 			<?php endif; ?>
 
 				<!-- pagenation -->
-				<?php if(paginate_links()) : ?>
-				<div class="pagenation">
-					<?php
-					echo paginate_links(
-						array (
-							'end_size' => 1,
-							'mid_size' => 1,
-							'prev_next' => true,
-							'prev_text' => '<i class="fas fa-angle-left"></i>',
-							'next_text' => '<i class="fas fa-angle-right"></i>',
-						)
-					); 
-					?>
-					<!-- <span class="page-numbers current">1</span>
-					<a class="page-numbers" href="#">2</a>
-					<a class="page-numbers" href="#">3</a>
-					<a class="next page-numbers" href="#"><i class="fas fa-angle-right"></i></a> -->
-				</div><!-- /pagenation -->
-				
-				<?php endif; ?>
+				<?php get_template_part( '../template-parts/pagenation') ?>
 
 			</main><!-- /primary -->
 

@@ -21,7 +21,7 @@
 
 
 				<div class="archive-head m_description">
-					<div class="archive-lead">TAG</div>
+					<div class="archive-lead">DATE</div>
 					<h1 class="archive-title m_category"><?php the_archive_title(); ?></h1><!-- /archive-title -->
 					<div class="archive-description">
 						<p>
