@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part( '../template-parts/pickup' )?>
+<?php get_template_part( '../template-parts/pickup_by_tag' )?>
 
 
 	<!-- content -->
